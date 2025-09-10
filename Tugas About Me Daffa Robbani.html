@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Daffa Muhammad Robbani</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #2980b9;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --card-background: #ffffff;
+            --text-color: #34495e;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            overflow: hidden;
+            max-width: 700px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            /* Perbaikan di sini */
+            margin: 0 auto 10px auto; /* Membuat margin atas 0, kiri/kanan auto (tengah), bawah 10px */
+            display: block; /* Penting untuk margin auto agar berfungsi dengan baik */
+            /* Akhir perbaikan */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header h1 {
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        .card-header p {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .info-section {
+            margin-bottom: 25px;
+        }
+
+        .info-section h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-section ul li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-section ul li strong {
+            flex-basis: 120px; /* Lebar tetap untuk label */
+            flex-shrink: 0;
+            color: var(--text-color);
+        }
+
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 10px;
+        }
+
+        .hobby-badge {
+            background-color: #eaf5ff;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex; /* Mengaktifkan layout fleksibel */
+            flex-wrap: wrap; /* Mengizinkan tombol pindah baris jika tidak muat */
+            justify-content: center; /* Menjaga semua tombol tetap di tengah */
+            gap: 10px; /* Memberi jarak antar tombol secara otomatis */
+            padding-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            background-color: var(--secondary-color);
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            flex-grow: 1; /* Biarkan tombol bisa membesar jika ada ruang */
+            text-align: center;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (min-width: 600px) {
+            .card {
+                flex-direction: row;
+            }
+            .card-header {
+                flex: 0 0 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .card-body {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <header class="card-header">
+            <img src="daffa_robbani.jpg" alt="Foto Daffa Muhammad Robbani" class="profile-pic">
+            <h1>Daffa M. Robbani</h1>
+            <p>Mahasiswa Ilmu Komputer 61</p>
+        </header>
+
+        <main class="card-body">
+            <section class="info-section">
+                <h2>Biodata</h2>
+                <ul>
+                    <li><strong>Nama:</strong> Daffa Muhammad Robbani</li>
+                    <li><strong>NIM:</strong> M0403241104</li>
+                    <li><strong>Prodi:</strong> Ilmu Komputer</li>
+                    <li><strong>Fakultas:</strong> SSMI</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h2>Hobi & Minat</h2>
+                <div class="hobbies">
+                    <span class="hobby-badge">Bermain Game</span>
+                    <span class="hobby-badge">Menulis</span>
+                    <span class="hobby-badge">Sulap</span>
+                </div>
+            </section>
+            
+            <section class="social-links">
+                <a href="https://www.instagram.com/darith_rbni" target="_blank">Instagram</a>
+                <a href="mailto:phoexlow@gmail.com" target="_blank">Email</a>
+                <a href="https://api.whatsapp.com/send/?phone=62895342153900&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
